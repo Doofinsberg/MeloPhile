@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "536936154272",
+    "firebase_url": "https://melophile-b94ab.firebaseio.com",
+    "project_id": "melophile-b94ab",
+    "storage_bucket": "melophile-b94ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536936154272:android:a5bcb9d8d14cc9c9",
+        "android_client_info": {
+          "package_name": "com.aditya.melophile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536936154272-b0vthlvoipuchcpe75m1bt7ssndb7e4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aditya.melophile",
+            "certificate_hash": "f8b73200ecfe75cc26d844b7b658f78cc3f0fd93"
+          }
+        },
+        {
+          "client_id": "536936154272-cg461epngnhe0db26v4q7smlmr2a5o9c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACFuJfUV1I6eHs0pO3-tD_WcNyn4nseK0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536936154272-cg461epngnhe0db26v4q7smlmr2a5o9c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
