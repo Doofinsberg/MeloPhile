@@ -6,4 +6,6 @@
     <string name="sign_in">SIGN IN</string>
     <string name="or_sign_in_with_a_social_account">Or Sign in with a Social Account</string>
     <string name="don_t_have_an_account_create_one">Don\'t have an Account CREATE ONE</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
