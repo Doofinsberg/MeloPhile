@@ -33,9 +33,9 @@ import java.net.PasswordAuthentication;
 
 public class MainActivity extends AppCompatActivity{
 
-    private TextView text_forgot,text_social;
-    private ImageView imageLogo,facebook;
-    private Button signin,signup,btn_gSignIn;
+    private TextView text_social;
+    private ImageView imageLogo;
+    private Button signin,signup,btn_gSignIn,btn_forgot;
     private EditText username,password;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -49,11 +49,10 @@ public class MainActivity extends AppCompatActivity{
         getWindow().setFlags(1024, 1024);
         setContentView(R.layout.activity_main);
 
-        text_forgot = (TextView)findViewById(R.id.text_forgot);
+        btn_forgot = (Button)findViewById(R.id.btn_forgot);
         text_social = (TextView)findViewById(R.id.social_signIN);
 
         imageLogo = (ImageView)findViewById(R.id.imageView);
-        facebook = (ImageView)findViewById(R.id.facebook);
 
         signin = (Button)findViewById(R.id.signin);
         signup = (Button)findViewById(R.id.signup);
@@ -63,6 +62,29 @@ public class MainActivity extends AppCompatActivity{
         password = (EditText)findViewById(R.id.password);
 
         mAuth = FirebaseAuth.getInstance();
+
+        //OnClick Listener for reset password
+
+        btn_forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = username.getText().toString();
+                if(TextUtils.isEmpty(email)){
+                    Toast.makeText(getApplicationContext(),"Enter Email",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(getApplicationContext(), "Check EMail to reset your password", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(),"Failed to send reset Email",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        });
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
